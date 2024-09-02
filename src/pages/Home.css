@@ -1,0 +1,75 @@
+/* Estilo para a seção hero */
+.hero {
+  height: calc(
+    100vh - 65px
+  ); /* Define a altura da seção como a altura total da janela de visualização menos 65px (por exemplo, altura do header) */
+  width: 100vw; /* Define a largura da seção como a largura total da janela de visualização */
+  display: flex; /* Usa Flexbox para o layout */
+  justify-content: flex-start; /* Alinha o conteúdo horizontalmente à esquerda */
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  background-image: url("../assets/homeImage.jpeg"); /* Define a imagem de fundo da seção */
+  background-size: cover; /* Faz a imagem de fundo cobrir toda a área da seção */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-attachment: fixed; /* Fixa a imagem de fundo na tela durante o scroll */
+  position: relative; /* Define a posição relativa para que o overlay funcione corretamente */
+}
+
+/* Estilo para o overlay sobre a imagem de fundo */
+.overlay {
+  position: absolute; /* Posiciona o overlay de forma absoluta em relação ao pai (.hero) */
+  top: 0; /* Posiciona o overlay no topo do pai */
+  left: 0; /* Posiciona o overlay à esquerda do pai */
+  width: 100%; /* Faz o overlay ocupar toda a largura do pai */
+  height: 100%; /* Faz o overlay ocupar toda a altura do pai */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Define uma cor de fundo preta com 50% de opacidade para escurecer a imagem de fundo */
+  display: flex; /* Usa Flexbox para o layout dentro do overlay */
+  justify-content: flex-start; /* Alinha o conteúdo horizontalmente à esquerda */
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+}
+
+/* Estilo para o conteúdo dentro do overlay */
+.content {
+  text-align: left; /* Alinha o texto à esquerda */
+  margin-left: 280px; /* Adiciona margem à esquerda para afastar o conteúdo do lado esquerdo */
+  color: white; /* Define a cor do texto como branco */
+}
+
+/* Estilo para o título na seção hero */
+.title {
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-size: 64px; /* Define o tamanho da fonte */
+  font-weight: bold; /* Define o peso da fonte como negrito */
+  margin-bottom: 5px; /* Adiciona uma pequena margem inferior para aproximar o título do subtítulo */
+}
+
+/* Estilo para o subtítulo na seção hero */
+.subtitle {
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-size: 24px; /* Define o tamanho da fonte */
+  max-width: 600px; /* Limita a largura do texto para melhorar a legibilidade */
+  margin-top: 5px; /* Adiciona uma pequena margem superior para reduzir o espaço entre o título e o subtítulo */
+}
+
+/* Estilo para o botão de chamada para ação (CTA) */
+.cta-button {
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-weight: 600; /* Define o peso da fonte */
+  font-size: 18px; /* Define o tamanho da fonte */
+  padding: 12px 35px; /* Adiciona espaçamento interno ao botão */
+  background-color: #32aa27; /* Define a cor de fundo do botão */
+  color: white; /* Define a cor do texto do botão como branco */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 2px; /* Adiciona bordas arredondadas ao botão */
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o botão */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo ao passar o mouse */
+}
+
+/* Estilo do botão de chamada para ação (CTA) ao passar o mouse */
+.cta-button:hover {
+  background-color: #28841c; /* Muda a cor de fundo para um verde mais escuro ao passar o mouse */
+}

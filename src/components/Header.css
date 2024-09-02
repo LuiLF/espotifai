@@ -1,0 +1,102 @@
+/* Estilo para o header fixo no topo da página */
+.header {
+  position: fixed; /* Fixa o header no topo da página */
+  top: 0; /* Posiciona o header no topo */
+  left: 0; /* Posiciona o header à esquerda */
+  width: 100%; /* Faz o header ocupar toda a largura da página */
+  background-color: white; /* Define a cor de fundo como branca */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil abaixo do header */
+  z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+/* Estilo para o contêiner do header, que alinha e centraliza o conteúdo */
+.container {
+  max-width: 1200px; /* Define a largura máxima do contêiner */
+  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+  padding: 19px 270px; /* Define o espaçamento interno */
+  display: flex; /* Usa Flexbox para o layout */
+  justify-content: space-between; /* Distribui o espaço entre os itens */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+/* Estilo para o texto do logo */
+.logo {
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-weight: 800; /* Define o peso da fonte como negrito */
+  font-style: normal; /* Define o estilo da fonte como normal */
+  font-size: 26px; /* Define o tamanho da fonte */
+  color: black; /* Define a cor do texto como preto */
+}
+
+/* Estilo para o logo ao passar o mouse sobre ele */
+.logo:hover {
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o logo */
+}
+
+/* Estilo para o contêiner dos botões de navegação */
+.nav {
+  display: flex; /* Usa Flexbox para o layout */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+/* Estilo para os botões de navegação */
+.nav-button {
+  position: relative; /* Necessário para posicionar o pseudo-elemento */
+  background: none; /* Remove o fundo padrão */
+  border: none; /* Remove a borda padrão */
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-size: 14px; /* Define o tamanho da fonte */
+  font-weight: 500; /* Define o peso da fonte */
+  letter-spacing: 0.5px; /* Ajusta o espaçamento entre letras */
+  color: #595959; /* Define a cor do texto */
+  margin-right: 20px; /* Adiciona margem à direita */
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o botão */
+  transition: color 0.3s; /* Adiciona uma transição suave para a cor do texto */
+  padding: 0; /* Remove o padding interno */
+}
+
+/* Adiciona uma barra abaixo do botão de navegação */
+.nav-button::after {
+  content: ""; /* Adiciona um pseudo-elemento vazio */
+  position: absolute; /* Posiciona a barra de forma absoluta dentro do botão */
+  left: 50%; /* Centraliza horizontalmente */
+  bottom: -3px; /* Posiciona a barra um pouco abaixo do texto */
+  transform: translateX(-50%); /* Centraliza a barra horizontalmente */
+  width: 100%; /* Faz a barra ocupar toda a largura do texto do botão */
+  height: 0; /* Inicialmente invisível com altura 0 */
+  background-color: #32aa27; /* Define a cor da barra */
+  transition: height 0.12s cubic-bezier(0.645, 0.045, 0.355, 1); /* Adiciona uma transição suave na altura */
+}
+
+/* Estilo da barra ao passar o mouse sobre o botão de navegação */
+.nav-button:hover::after {
+  height: 2px; /* Define a altura da barra ao passar o mouse */
+}
+
+/* Estilo do botão de navegação ao passar o mouse sobre ele */
+.nav-button:hover {
+  color: #32aa27; /* Muda a cor do texto para verde ao hover */
+}
+
+/* Estilo para o botão de contato */
+.contact-button {
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-weight: 600; /* Define o peso da fonte como negrito */
+  font-size: 14px; /* Define o tamanho da fonte */
+  background-color: white; /* Define a cor de fundo como branca */
+  color: black; /* Define a cor do texto como preto */
+  padding: 14px 30px; /* Define o tamanho do botão */
+  border: 2px solid black; /* Define uma borda preta */
+  letter-spacing: 1px; /* Ajusta o espaçamento entre letras */
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o botão */
+  transition: background-color 0.3s, border 0.3s, color 0.3s, outline 0.3s ease,
+    outline-offset 0.3s ease; /* Adiciona transições suaves para várias propriedades */
+}
+
+/* Estilo do botão de contato ao passar o mouse sobre ele */
+.contact-button:hover {
+  background-color: #32aa27; /* Muda a cor de fundo para verde */
+  border: 2px solid #32aa27; /* Muda a cor da borda para verde */
+  color: white; /* Muda a cor do texto para branco */
+  border-radius: 2px; /* Adiciona bordas arredondadas ao botão */
+}

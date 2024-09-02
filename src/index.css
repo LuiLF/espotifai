@@ -1,0 +1,8 @@
+/* Estilo global para o elemento <html> e <body> */
+html,
+body {
+  margin: 0; /* Remove as margens padrão */
+  padding: 0; /* Remove o padding padrão */
+  width: 100%; /* Faz o <html> e <body> ocupar toda a largura da janela de visualização */
+  height: 100%; /* Faz o <html> e <body> ocupar toda a altura da janela de visualização */
+}

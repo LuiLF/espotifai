@@ -1,0 +1,131 @@
+/* Animação para a entrada de elementos com efeito de deslizamento para cima */
+@keyframes slideUp {
+  from {
+    transform: translateY(
+      50px
+    ); /* O elemento começa 50px abaixo de sua posição final */
+    opacity: 0; /* Inicialmente, o elemento está invisível */
+  }
+  to {
+    transform: translateY(0); /* Move o elemento para sua posição original */
+    opacity: 1; /* Torna o elemento totalmente visível */
+  }
+}
+
+/* Animação para a entrada de elementos com efeito de desvanecimento */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* O elemento começa invisível */
+  }
+  to {
+    opacity: 1; /* Torna o elemento totalmente visível */
+  }
+}
+
+/* Estilos gerais da seção sobre (about) */
+.about {
+  padding: 100px 50px; /* Adiciona 100px de espaçamento interno vertical e 50px horizontal */
+  display: flex; /* Usa Flexbox para o layout da seção */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Alinha o conteúdo verticalmente */
+  background-color: #f9f9f9; /* Define a cor de fundo como cinza claro */
+}
+
+/* Contêiner principal que engloba o texto e a imagem na seção sobre */
+.about-content {
+  margin-top: 30px; /* Adiciona uma margem superior de 30px */
+  display: flex; /* Usa Flexbox para o layout do contêiner */
+  flex-direction: row; /* Alinha o conteúdo em linha (horizontalmente) */
+  max-width: 1200px; /* Define a largura máxima do contêiner */
+  width: 100%; /* Faz o contêiner ocupar toda a largura disponível */
+  align-items: center; /* Alinha verticalmente o conteúdo ao centro */
+}
+
+/* Estilos para o texto na seção sobre */
+.about-text {
+  flex: 1; /* Faz o texto ocupar o espaço restante disponível */
+  margin-left: 100px; /* Adiciona uma margem esquerda de 100px */
+  opacity: 0; /* Inicia o texto como invisível */
+}
+
+/* Adiciona a animação slideUp ao texto quando a classe .animate é adicionada */
+.about-text.animate {
+  animation: slideUp 0.8s ease-in-out forwards; /* Aplica a animação slideUp com duração de 0.8s */
+}
+
+/* Estilos para o título principal dentro da seção sobre */
+.about-text h1 {
+  font-size: 0.875rem; /* Define o tamanho da fonte do título principal */
+  font-style: normal; /* Define o estilo da fonte como normal */
+  font-family: Poppins; /* Define a fonte usada */
+  font-weight: 600; /* Define o peso da fonte como negrito */
+  line-height: 1.25; /* Define a altura da linha */
+  letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  margin: 0 0 10px; /* Remove margens superior e lateral e adiciona uma margem inferior de 10px */
+  color: #32aa27; /* Define a cor do texto como verde */
+}
+
+/* Estilos para o subtítulo dentro da seção sobre */
+.about-text h2 {
+  font-size: 2rem; /* Define o tamanho da fonte do subtítulo */
+  font-style: normal; /* Define o estilo da fonte como normal */
+  font-family: Poppins; /* Define a fonte usada */
+  font-weight: 600; /* Define o peso da fonte como negrito */
+  line-height: 1.25; /* Define a altura da linha */
+  letter-spacing: 0px; /* Remove o espaçamento entre as letras */
+  text-transform: none; /* Não altera o caso do texto */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+}
+
+/* Estilos para o parágrafo dentro da seção sobre */
+.about-text p {
+  font-size: 1.125rem; /* Define o tamanho da fonte do parágrafo */
+  font-style: normal; /* Define o estilo da fonte como normal */
+  font-family: Poppins; /* Define a fonte usada */
+  font-weight: 400; /* Define o peso da fonte como normal */
+  line-height: 1.5; /* Define a altura da linha */
+  letter-spacing: 0px; /* Remove o espaçamento entre as letras */
+  text-transform: none; /* Não altera o caso do texto */
+  color: #595959; /* Define a cor do texto como cinza escuro */
+}
+
+/* Estilos para a imagem na seção sobre */
+.about-image {
+  flex: 1; /* Faz a imagem ocupar o espaço restante disponível */
+  display: flex; /* Usa Flexbox para o layout da imagem */
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  margin-right: 50px; /* Adiciona uma margem direita de 50px */
+}
+
+/* Estilos para a imagem dentro da seção sobre */
+.about-image img {
+  height: 530px; /* Define a altura da imagem */
+  width: 420px; /* Define a largura da imagem */
+  object-fit: cover; /* Corta a imagem para preencher o contêiner mantendo a proporção */
+  opacity: 0; /* Inicia a imagem como invisível */
+}
+
+/* Adiciona a animação fadeIn à imagem quando a classe .animate é adicionada */
+.about-image.animate img {
+  animation: fadeIn 0.6s ease-out forwards; /* Aplica a animação fadeIn com duração de 0.6s */
+}
+
+/* Estilos para o botão na seção sobre */
+.btn-about {
+  background: none; /* Remove o fundo do botão */
+  border: none; /* Remove a borda do botão */
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-size: 18px; /* Define o tamanho da fonte do botão */
+  font-weight: 400; /* Define o peso da fonte como normal */
+  color: #595959; /* Define a cor do texto do botão como cinza escuro */
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o botão */
+  padding: 0; /* Remove o preenchimento interno do botão */
+  text-decoration: underline; /* Adiciona sublinhado ao texto do botão */
+}
+
+/* Remove o sublinhado do botão ao passar o mouse */
+.btn-about:hover {
+  text-decoration: none; /* Remove o sublinhado ao passar o mouse */
+}

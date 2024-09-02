@@ -1,0 +1,5 @@
+/* Estilo para o elemento <body> */
+body {
+  font-family: "Poppins", sans-serif; /* Define a fonte padrão para o texto do corpo como 'Poppins' com uma fonte sans-serif como fallback */
+  overflow-x: hidden; /* Remove a barra de rolagem horizontal, prevenindo rolagem horizontal excessiva */
+}

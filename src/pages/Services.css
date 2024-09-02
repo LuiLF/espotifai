@@ -1,0 +1,151 @@
+/* Animação para fazer um elemento deslizar para cima */
+@keyframes slideUp {
+  from {
+    transform: translateY(
+      50px
+    ); /* Move o elemento 50px para baixo a partir de sua posição original */
+    opacity: 0; /* Inicialmente invisível */
+  }
+  to {
+    transform: translateY(0); /* Move o elemento para sua posição original */
+    opacity: 1; /* Torna o elemento completamente visível */
+  }
+}
+
+/* Animação para fazer um elemento aparecer com um efeito de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Inicialmente invisível */
+  }
+  to {
+    opacity: 1; /* Torna o elemento completamente visível */
+  }
+}
+
+/* Estilo para a seção de serviços */
+.services {
+  padding: 100px; /* Adiciona espaçamento interno */
+  background-color: #eef1ef; /* Define a cor de fundo */
+}
+
+/* Estilo para os títulos na seção de serviços */
+.services h1,
+.services h2 {
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 0.6s ease-out; /* Transição suave para a visibilidade */
+}
+
+/* Aplica a animação slideUp aos títulos com a classe 'animate' */
+.services h1.animate,
+.services h2.animate {
+  animation: slideUp 0.8s ease-out forwards; /* Define a duração e o timing da animação */
+}
+
+/* Estilo específico para o título h1 na seção de serviços */
+.services h1 {
+  font-size: 0.875rem; /* Define o tamanho da fonte */
+  font-style: normal; /* Define o estilo da fonte */
+  font-family: Poppins; /* Define a fonte usada */
+  font-weight: 600; /* Define o peso da fonte */
+  line-height: 1.25; /* Define a altura da linha */
+  letter-spacing: 1px; /* Ajusta o espaçamento entre letras */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  margin: 0 0 10px 160px; /* Define a margem inferior e à esquerda */
+  color: #32aa27; /* Define a cor do texto */
+}
+
+/* Estilo específico para o título h2 na seção de serviços */
+.services h2 {
+  font-size: 2rem; /* Define o tamanho da fonte */
+  font-style: normal; /* Define o estilo da fonte */
+  font-family: Poppins; /* Define a fonte usada */
+  font-weight: 600; /* Define o peso da fonte */
+  line-height: 1.25; /* Define a altura da linha */
+  letter-spacing: 0px; /* Ajusta o espaçamento entre letras */
+  text-transform: none; /* Mantém o texto com a capitalização padrão */
+  margin: 0 0 50px 160px; /* Define a margem inferior e à esquerda */
+}
+
+/* Estilo para o contêiner dos cartões de serviço */
+.services-cards {
+  display: flex; /* Usa Flexbox para o layout */
+  justify-content: space-around; /* Distribui os cartões com espaço ao redor */
+  flex-wrap: wrap; /* Permite que os cartões se movam para a linha seguinte se necessário */
+  padding: 0 150px; /* Adiciona espaçamento interno reduzido nas laterais */
+  opacity: 0; /* Inicialmente invisível */
+}
+
+/* Aplica a animação fadeIn aos cartões com a classe 'animate' */
+.services-cards.animate {
+  animation: fadeIn 0.8s ease-out forwards; /* Define a duração e o timing da animação */
+}
+
+/* Estilo para cada cartão */
+.card {
+  background-color: #fff; /* Define a cor de fundo como branca */
+  overflow: hidden; /* Garante que o conteúdo não transborde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao redor do cartão */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona transições suaves para transformações e sombras */
+  max-width: 320px; /* Define a largura máxima do cartão */
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o cartão */
+  position: relative; /* Necessário para posicionar o símbolo dentro do cartão */
+}
+
+/* Estilo para o símbolo dentro do cartão */
+.symbol {
+  display: inline-block; /* Permite transformações aplicadas ao símbolo */
+  transition: transform 0.2s ease-in-out; /* Define a animação para transformações */
+  position: absolute; /* Posiciona o símbolo dentro do cartão */
+}
+
+/* Move o símbolo para a direita quando o mouse está sobre o cartão */
+.card:hover .symbol {
+  transform: translateX(10px); /* Move o símbolo 10px para a direita */
+}
+
+/* Estilo para a imagem dentro do cartão */
+.card img {
+  width: 100%; /* Faz a imagem ocupar toda a largura do cartão */
+  height: 220px; /* Define a altura da imagem */
+  object-fit: cover; /* Faz a imagem cobrir o espaço do cartão sem distorção */
+}
+
+/* Estilo para o conteúdo do cartão */
+.card-content {
+  padding: 8px; /* Define o espaçamento interno do conteúdo do cartão */
+}
+
+/* Estilo para o título dentro do conteúdo do cartão */
+.card-content h3 {
+  font-size: 1.25rem; /* Define o tamanho da fonte */
+  font-style: normal; /* Define o estilo da fonte */
+  font-family: Poppins; /* Define a fonte usada */
+  font-weight: 600; /* Define o peso da fonte */
+  line-height: 1.25; /* Define a altura da linha */
+  letter-spacing: 0px; /* Ajusta o espaçamento entre letras */
+  text-transform: none; /* Mantém o texto com a capitalização padrão */
+  transition: color 0.3s ease; /* Adiciona uma transição suave para a cor do texto */
+}
+
+/* Estilo para o parágrafo dentro do conteúdo do cartão */
+.card-content p {
+  font-size: 1.125rem; /* Define o tamanho da fonte */
+  font-style: normal; /* Define o estilo da fonte */
+  font-family: Poppins; /* Define a fonte usada */
+  font-weight: 400; /* Define o peso da fonte */
+  line-height: 1.5; /* Define a altura da linha */
+  letter-spacing: 0px; /* Ajusta o espaçamento entre letras */
+  text-transform: none; /* Mantém o texto com a capitalização padrão */
+  color: #595959; /* Define a cor do texto */
+}
+
+/* Estilo do cartão ao passar o mouse sobre ele */
+.card:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do cartão */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifica a sombra ao redor do cartão */
+}
+
+/* Estilo do título dentro do cartão ao passar o mouse sobre o cartão */
+.card:hover h3 {
+  color: #32aa27; /* Muda a cor do título para verde */
+}

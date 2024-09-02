@@ -1,0 +1,53 @@
+/* Estilo para o rodapé (footer) */
+footer {
+  background-color: #162415; /* Define a cor de fundo do rodapé como um verde escuro */
+  height: 268px; /* Define a altura do rodapé */
+  width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+  display: flex; /* Usa Flexbox para o layout do rodapé */
+  align-items: center; /* Alinha verticalmente o conteúdo ao centro */
+  justify-content: flex-start; /* Alinha o conteúdo horizontalmente à esquerda */
+  padding-left: 20px; /* Adiciona 20px de espaçamento interno à esquerda */
+}
+
+/* Estilo para o contêiner de botões dentro do rodapé */
+footer .button-container {
+  display: flex; /* Usa Flexbox para o layout dos botões */
+  gap: 20px; /* Adiciona 20px de espaço entre os botões */
+  margin-left: 200px; /* Adiciona margem à esquerda para afastar o contêiner dos lados do rodapé */
+}
+
+/* Estilo para cada botão dentro do rodapé */
+footer .button {
+  background: none; /* Remove a cor de fundo padrão do botão */
+  border: none; /* Remove a borda padrão do botão */
+  color: white; /* Define a cor do texto do botão como branco */
+  font-size: 14.5px; /* Define o tamanho da fonte do botão */
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o botão */
+  position: relative; /* Define a posição relativa para permitir a colocação do pseudo-elemento ::before */
+  padding: 10px; /* Adiciona 10px de espaçamento interno ao botão */
+  overflow: hidden; /* Garante que o efeito de hover não exceda o limite do botão */
+  font-family: "Poppins", sans-serif; /* Define a fonte usada no botão */
+  font-weight: 500; /* Define o peso da fonte */
+}
+
+/* Estilo para o pseudo-elemento ::before do botão, usado para o efeito de hover */
+footer .button::before {
+  content: ""; /* Cria um pseudo-elemento vazio */
+  position: absolute; /* Posiciona o pseudo-elemento de forma absoluta em relação ao botão */
+  bottom: 0; /* Posiciona o pseudo-elemento na parte inferior do botão */
+  left: 0; /* Posiciona o pseudo-elemento na parte esquerda do botão */
+  width: 100%; /* Faz o pseudo-elemento ocupar toda a largura do botão */
+  height: 3px; /* Define a altura do pseudo-elemento */
+  background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+  transform-origin: center; /* Define o ponto de origem da transformação no centro */
+  opacity: 0; /* Inicialmente invisível */
+  transition: transform 0.1s ease, opacity 0.3s; /* Define a transição suave para a transformação e a opacidade */
+}
+
+/* Estilo do pseudo-elemento ::before quando o botão é hover */
+footer .button:hover::before {
+  transform: scaleX(
+    2
+  ); /* Aumenta a escala horizontal do pseudo-elemento para criar um efeito de expansão */
+  opacity: 1; /* Torna o pseudo-elemento visível */
+}

@@ -1,0 +1,237 @@
+/* Animação para a entrada de elementos com efeito de deslizamento para cima */
+@keyframes slideUp {
+  from {
+    transform: translateY(
+      50px
+    ); /* Inicialmente, o elemento está deslocado 50px para baixo */
+    opacity: 0; /* Inicialmente, o elemento está invisível */
+  }
+  to {
+    transform: translateY(0); /* Move o elemento para sua posição original */
+    opacity: 1; /* Torna o elemento totalmente visível */
+  }
+}
+
+/* Estilos gerais da seção de contato */
+.contact-section {
+  display: flex; /* Usa Flexbox para o layout da seção de contato */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  padding: 30px 0; /* Adiciona 30px de espaçamento acima e abaixo da seção */
+  background-color: #ffffff; /* Define a cor de fundo da seção como branco */
+}
+
+/* Contêiner principal que engloba o formulário e as informações */
+.contact-container {
+  display: flex; /* Usa Flexbox para o layout do contêiner */
+  max-width: 1200px; /* Define a largura máxima do contêiner */
+  width: 100%; /* Faz o contêiner ocupar toda a largura disponível */
+  padding: 20px; /* Adiciona 20px de espaçamento interno ao contêiner */
+  margin-left: 150px; /* Adiciona margem à esquerda para afastar o contêiner do lado */
+  background-color: #fff; /* Define a cor de fundo do contêiner como branco */
+  gap: 50px; /* Adiciona 50px de espaço entre as colunas dentro do contêiner */
+}
+
+/* Inicialmente invisível para os contêineres de formulário e informações */
+.form-container,
+.info-container {
+  opacity: 0; /* Torna os elementos inicialmente invisíveis */
+}
+
+/* Aplica a animação slideUp aos contêineres quando a classe .animate é adicionada */
+.form-container.animate,
+.info-container.animate {
+  animation: slideUp 0.8s ease-out forwards; /* Aplica a animação slideUp com duração de 0.8s */
+}
+
+/* Estilo para links de contato */
+.contact-link {
+  text-decoration: underline; /* Adiciona sublinhado ao texto do link */
+  color: #333; /* Define a cor do texto do link como cinza escuro */
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o link */
+}
+
+/* Muda a cor dos links de contato ao passar o mouse */
+.contact-link:hover {
+  color: #32aa27; /* Muda a cor para verde ao passar o mouse */
+}
+
+/* Estilização do contêiner do formulário */
+.form-container {
+  flex: 0.7; /* Define a largura do formulário como 70% do contêiner pai */
+  padding: 20px; /* Adiciona 20px de espaçamento interno ao formulário */
+}
+
+/* Estilização do contêiner de informações */
+.info-container {
+  flex: none; /* A largura do contêiner não é ajustada automaticamente */
+  width: auto; /* A largura do contêiner é ajustada conforme o conteúdo */
+  padding: 30px; /* Adiciona 30px de espaçamento interno ao contêiner de informações */
+  background-color: #f5f5f5; /* Define a cor de fundo como cinza claro */
+  align-self: center; /* Alinha o contêiner verticalmente ao centro */
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+}
+
+/* Estilos para os títulos dentro do formulário */
+.form-container h1 {
+  font-size: 0.875rem; /* Define o tamanho da fonte do título */
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-weight: 600; /* Define o peso da fonte como negrito */
+  letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  color: #32aa27; /* Define a cor do título como verde */
+  margin-bottom: 5px; /* Adiciona uma margem inferior de 5px */
+}
+
+.form-container h2 {
+  font-size: 2rem; /* Define o tamanho da fonte do subtítulo */
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-weight: 600; /* Define o peso da fonte como negrito */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+}
+
+/* Estilos para os títulos dentro do contêiner de informações */
+.info-container h2,
+.info-container h3 {
+  font-size: 1.8rem; /* Define o tamanho da fonte dos títulos */
+  color: #333; /* Define a cor dos títulos como cinza escuro */
+  margin-bottom: 15px; /* Adiciona uma margem inferior de 15px */
+}
+
+/* Estilos para os labels dentro do formulário */
+.form-container label {
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-size: 14px; /* Define o tamanho da fonte do label */
+  font-weight: bold; /* Define o peso da fonte como negrito */
+  margin-bottom: 5px; /* Adiciona uma margem inferior de 5px */
+  display: block; /* Faz o label ocupar toda a largura disponível */
+}
+
+/* Estilo para o asterisco obrigatório nos labels */
+.form-container .required {
+  color: red; /* Define a cor do asterisco como vermelho */
+}
+
+/* Estilos para o textarea dentro do formulário */
+.form-container textarea {
+  width: 100%; /* Faz o textarea ocupar toda a largura disponível */
+  padding: 15px; /* Adiciona 15px de espaçamento interno */
+  margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+  border: 1px solid #000; /* Define uma borda preta */
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-size: 14px; /* Define o tamanho da fonte */
+  transition: outline 0.3s ease, outline-offset 0.3s ease; /* Adiciona transições suaves para outline e outline-offset */
+  resize: vertical; /* Permite o redimensionamento vertical do textarea */
+  min-height: 100px; /* Define a altura mínima do textarea */
+}
+
+/* Estilos para inputs dentro do formulário */
+.form-container input {
+  width: 100%; /* Faz o input ocupar toda a largura disponível */
+  padding: 15px; /* Adiciona 15px de espaçamento interno */
+  margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+  border: 1px solid #000; /* Define uma borda preta */
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  font-size: 14px; /* Define o tamanho da fonte */
+  transition: outline 0.3s ease, outline-offset 0.3s ease; /* Adiciona transições suaves para outline e outline-offset */
+}
+
+/* Estilos para inputs e textarea em foco */
+.form-container input:focus,
+.form-container textarea:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.5); /* Adiciona uma borda em foco com 50% de opacidade */
+  outline-offset: 2px; /* Define o espaço entre o input e a borda */
+}
+
+/* Estilos para o contêiner da checkbox dentro do formulário */
+.form-container .checkbox-container {
+  display: flex; /* Usa Flexbox para o layout da checkbox */
+  align-items: center; /* Alinha verticalmente a checkbox e o label ao centro */
+  margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+}
+
+/* Estilos para o input da checkbox */
+.form-container .checkbox-container input {
+  margin-right: 10px; /* Adiciona uma margem à direita da checkbox */
+  width: 18px; /* Define a largura da checkbox */
+  height: 18px; /* Define a altura da checkbox */
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre a checkbox */
+}
+
+/* Estilos para o label da checkbox */
+.form-container .checkbox-container label {
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o label */
+  font-size: 14px; /* Define o tamanho da fonte do label */
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+}
+
+/* Estilos para o botão de submit do formulário */
+.submit-button {
+  width: 100%; /* Faz o botão ocupar toda a largura disponível */
+  padding: 15px; /* Adiciona 15px de espaçamento interno */
+  background-color: #32aa27; /* Define a cor de fundo do botão como verde */
+  color: #fff; /* Define a cor do texto do botão como branco */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 2px; /* Adiciona bordas arredondadas ao botão */
+  font-weight: 600; /* Define o peso da fonte como negrito */
+  font-size: 16px; /* Define o tamanho da fonte */
+  font-family: "Poppins", sans-serif; /* Define a fonte usada */
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o botão */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+/* Muda a cor do botão de submit ao passar o mouse */
+.submit-button:hover {
+  background-color: #26801d; /* Muda a cor para um verde mais escuro ao passar o mouse */
+}
+
+/* Estilos para parágrafos e listas dentro do contêiner de informações */
+.info-container p,
+.info-container ul {
+  font-size: 1rem; /* Define o tamanho da fonte */
+  color: #333; /* Define a cor do texto como cinza escuro */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+}
+
+/* Estilo para links dentro dos parágrafos do contêiner de informações */
+.info-container p a {
+  text-decoration: underline; /* Adiciona sublinhado ao texto do link */
+  color: #333; /* Define a cor do texto do link como cinza escuro */
+  margin-left: 8px; /* Adiciona uma margem à esquerda do link */
+}
+
+/* Estilos para ícones dentro dos parágrafos do contêiner de informações */
+.info-container p svg {
+  margin-right: 8px; /* Adiciona uma margem à direita do ícone */
+  color: #333; /* Define a cor dos ícones como cinza escuro */
+}
+
+/* Estilos para listas não ordenadas dentro do contêiner de informações */
+.info-container ul {
+  list-style: none; /* Remove os marcadores das listas */
+  padding: 0; /* Remove o preenchimento das listas */
+}
+
+/* Estilos para itens das listas dentro do contêiner de informações */
+.info-container ul li {
+  margin-bottom: 5px; /* Adiciona uma margem inferior de 5px */
+}
+
+/* Estilos para links dentro do contêiner de informações */
+.info-container a {
+  text-decoration: underline; /* Adiciona sublinhado ao texto do link */
+  color: #333; /* Define a cor do texto do link como cinza escuro */
+  font-size: 1rem; /* Define o tamanho da fonte do link */
+}
+
+/* Muda a cor dos links dentro do contêiner de informações ao passar o mouse */
+.info-container a:hover {
+  color: green; /* Muda a cor para verde ao passar o mouse */
+}
+
+/* Estilos específicos para a seção de horários dentro do contêiner de informações */
+.info-container .hours-section {
+  background-color: #f0f0f0; /* Define a cor de fundo da seção de horários como cinza claro */
+  padding: 15px; /* Adiciona 15px de espaçamento interno */
+  border-radius: 4px; /* Adiciona bordas arredondadas */
+  margin-top: 20px; /* Adiciona uma margem superior de 20px */
+}
